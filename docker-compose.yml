@@ -48,11 +48,11 @@ services:
     #起動順を制御, dbの後
     depends_on:
       - db
-    ports:
-      - 5000:3000 # ポートフォワード
-    networks:
-      app_net:
-        ipv4_address: '172.20.0.3'
+    # ports:
+    #   - 5000:3000 # ポートフォワード
+    # networks:
+    #   app_net:
+    #     ipv4_address: '172.20.0.3'
 
 
   frontend:
