@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-  belongs_to :Group
+  belongs_to :group
 end

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group: one
+  user: one
+  event_name: MyString
+  event_date: 2020-11-08
+  start_time: 2020-11-08 11:40:21
+  end_name: 2020-11-08 11:40:21
+  memo: MyText
+
+two:
+  group: two
+  user: two
+  event_name: MyString
+  event_date: 2020-11-08
+  start_time: 2020-11-08 11:40:21
+  end_name: 2020-11-08 11:40:21
+  memo: MyText

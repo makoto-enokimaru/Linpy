@@ -1,23 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  group_id: MyString
   group_name: MyString
   group_code: MyString
-  group_profile: MyText
+  group_password: MyString
   rep_postcode: MyString
   rep_address: MyText
   rep_phone_number: MyString
   rep_email: MyString
   status: MyString
+  group_profile: MyString
 
 two:
-  group_id: MyString
   group_name: MyString
   group_code: MyString
-  group_profile: MyText
+  group_password: MyString
   rep_postcode: MyString
   rep_address: MyText
   rep_phone_number: MyString
   rep_email: MyString
   status: MyString
+  group_profile: MyString
