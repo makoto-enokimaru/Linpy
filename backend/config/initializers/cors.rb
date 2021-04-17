@@ -1,7 +1,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
       # localhost:3000 からのアクセスを許容する
-      origins ['http://localhost:3000']
+      origins "*"
   
       resource '*',
         headers: :any,
