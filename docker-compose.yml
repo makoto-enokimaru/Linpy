@@ -36,23 +36,23 @@ services:
     
     #バックエンドはcashe, temp, log, gitにもマウント
     volumes:
-      - ./backend:/$WORKDIR:cached
+      - ./backend:/app:cached
       - bundle_data:/usr/local/bundle:cached
-      - /$WORKDIR/vendor
-      - /$WORKDIR/tmp
-      - /$WORKDIR/log
-      - /$WORKDIR/.git
+      - /app/vendor
+      - /app/tmp
+      - /app/log
+      - /app/.git
     environment:
       TZ: Asia/Tokyo
     
     #起動順を制御, dbの後
     depends_on:
       - db
-    # ports:
-    #   - 5000:3000 # ポートフォワード
-    # networks:
-    #   app_net:
-    #     ipv4_address: '172.20.0.3'
+    ports:
+      - 5000:3000 # ポートフォワード
+    networks:
+      app_net:
+        ipv4_address: '172.20.0.3'
 
 
   frontend:
@@ -60,7 +60,7 @@ services:
     build: ./frontend/
     image: frontend
     volumes:
-      - ./frontend:/$WORKDIR
+      - ./frontend:/app
     #localhostの3000から3000にアクセスポート設定
     ports:
       - 8080:3000
