@@ -14,7 +14,8 @@ RUN mkdir /app
 WORKDIR /app
 
 #HostのGemfileを共有
-COPY Gemfile /app/Gemfile
+COPY Gemfile /app/Gemfile 
+COPY Gemfile.lock /app/Gemfile.lock 
 
 #各種パッケージをインストール
 #libpq: GemにてMySQLを導入するために必要
