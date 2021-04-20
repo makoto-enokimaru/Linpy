@@ -8,6 +8,9 @@ jobs:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
       - image: circleci/mysql:5.7.30
+        environment:
+          MYSQL_ROOT_HOST: '%'
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
 
     working_directory: ~/repo
 
@@ -36,6 +39,11 @@ jobs:
           working_directory: ~/repo/backend
 
       # Database setup
+      - run:
+          # CircleCI用のデータベース設定を使う 
+          command: mv config/database_ci.yml config/database.yml
+          working_directory: ~/repo/backend
+
       - run:
           command: bundle exec rails db:create
           working_directory: ~/repo/backend
