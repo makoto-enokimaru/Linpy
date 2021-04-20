@@ -40,8 +40,9 @@ jobs:
 
       # Database setup
       - run:
-          name: Use specific database.yml # CircleCI用のデータベース設定を使う
+          # CircleCI用のデータベース設定を使う
           command: mv config/database_ci.yml config/database.yml
+          working_directory: ~/repo/backend
 
       - run:
           command: bundle exec rails db:create
