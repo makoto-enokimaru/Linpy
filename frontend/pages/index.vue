@@ -1,20 +1,23 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">
-        Zenn-app
-      </h1>
-      <h2 class="subtitle">
-        {{ subTitle }}
-      </h2>
-      <button @click="getSomething">
-        タスク取得
-      </button>
-      <!-- 取得した tasks をリスト形式で表示する -->
-      <ul v-for=" task in tasks" :key="task.id">
-        <li style="text-align: left;">{{ task.title }}</li>
-      </ul>
-    </div>
+  <div class="top">
+      <div class="top-header">
+        <a href="/"><img class="logo" src="../assets/img/logo.png" alt="Linpy Home"></a>
+        <ul class="main-nav">
+            <li><NuxtLink to ="">使い方</NuxtLink></li>
+            <li><NuxtLink to="/user/login">ログイン</NuxtLink></li>
+            <li><NuxtLink to="/user/register">無料登録</NuxtLink></li>
+        </ul>
+      </div>
+      <div class="top-content">
+            <h1>関係値が人を、組織を、ドライブする</h1>
+            <h3>組織の関係値向上に寄与するコミュニケーションツール</h3>
+            <h3>エンゲージメントを向上し組織の目標達成に貢献</h3>
+            <div class="top-input">
+                <input class="ef" type="text" placeholder="emailを入力してください">
+                <span class="focus_line"></span>
+                <input class="button" type="button" value="Enter" >
+            </div>
+      </div>
   </div>
 </template>
 
@@ -22,7 +25,6 @@
 export default {
   data() {
     return {
-      subTitle: 'Zenn is good service!!',
       tasks: []
     }
   },
@@ -37,31 +39,102 @@ export default {
 </script>
 
 <style>
-.container {
+.top {
+    background-color: #FFC55C;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+}
+.top-header {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+
+.logo {
+    display: flex;
+    width: 150px;
+    position: relative;
+    top: 10px;
+    left: 20px;
 }
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.main-nav {
+    font-family: 'Source Sans Pro';
+    display: flex;
+    font-size: 1.25rem;
+    margin-top: 34px;
+    list-style: none;
+    position: relative;
+    top: 10px;
+    left: 800px;
 }
-.links {
-  padding-top: 15px;
+
+.main-nav li {
+    margin-left: 36px;
 }
+.main-nav a {
+    color: #432;
+    text-decoration: none;
+    
+}
+.main-nav a:hover {
+    color: #0bd;
+}
+
+.top-content {
+    margin: 10px 0 42px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+.top-content h1{
+    font-family: 'Source Sans Pro';
+    font-size: 300%;
+    text-transform: uppercase;
+    font-weight: 1200;
+}
+
+.top-content h3{
+    font-size: 150%;
+    font-family: "游ゴシック",sans-serif;
+    text-transform: uppercase;
+    font-weight: 1200;
+}
+.top-input {
+	position: relative;
+    margin: 60px;
+}
+.top-input input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 30%;
+	letter-spacing: 1px;
+	padding-left: 1em;
+    background-color: aliceblue;
+}
+.top-input input[type='text']:focus {
+	outline: none;
+}
+.ef {
+	padding: 7px 14px;
+	border: 1px solid #00ced1;
+	background: transparent;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #00ced1;
+  color: #00ced1;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+.button:hover {
+  color: #fff;
+  background-color: #00ced1;
+}
+
 </style>
