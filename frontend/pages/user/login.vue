@@ -22,11 +22,11 @@
 </template>
 
 <script>
-  // import Header from '~/components/header.vue'
+  import Header from '~/components/header.vue'
   export default {
-    // components: {
-    //   Header
-    // },
+    components: {
+      Header
+    },
     data() {
       return {
         error: null,
@@ -55,7 +55,7 @@
 .login-wrap {
   background-color: #FFFACD;
   background-repeat: no-repeat;
-  min-height: 92vh;
+  min-height: 90vh;
   margin: 0 auto;
   display: flex;
 }

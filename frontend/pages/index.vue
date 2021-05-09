@@ -3,9 +3,9 @@
       <div class="top-header">
         <a href="/"><img class="logo" src="../assets/img/logo.png" alt="Linpy Home"></a>
         <ul class="main-nav">
-            <li><NuxtLink to ="">使い方</NuxtLink></li>
-            <li><NuxtLink to="/user/login">ログイン</NuxtLink></li>
-            <li><NuxtLink to="/user/register">無料登録</NuxtLink></li>
+            <li><NuxtLink to="" class="nuxtlink">使い方</NuxtLink></li>
+            <li><NuxtLink to="/user/login" class="nuxtlink">ログイン</NuxtLink></li>
+            <li><NuxtLink to="/user/register" class="nuxtlink">新規登録</NuxtLink></li>
         </ul>
       </div>
       <div class="top-content">
@@ -15,7 +15,7 @@
             <div class="top-input">
                 <input class="ef" type="text" placeholder="emailを入力してください">
                 <span class="focus_line"></span>
-                <input class="button" type="button" value="Enter" >
+                <input class="button" type="button" value="新規登録" >
             </div>
       </div>
   </div>
@@ -53,7 +53,7 @@ export default {
 
 .logo {
     display: flex;
-    width: 150px;
+    width: 180px;
     position: relative;
     top: 10px;
     left: 20px;
@@ -72,12 +72,11 @@ export default {
 .main-nav li {
     margin-left: 36px;
 }
-.main-nav a {
-    color: #432;
+.nuxtlink {
     text-decoration: none;
-    
+    color: #8B4513;
 }
-.main-nav a:hover {
+.nuxtlink:hover {
     color: #0bd;
 }
 
@@ -128,13 +127,14 @@ export default {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #00ced1;
-  color: #00ced1;
+  color: #fff;
   text-decoration: none;
   padding: 10px 30px;
+  background-color: #00ced1;
 }
 .button:hover {
   color: #fff;
-  background-color: #00ced1;
+  background-color: #02b1b4;
 }
 
 </style>
