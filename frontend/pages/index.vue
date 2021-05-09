@@ -1,23 +1,28 @@
 <template>
-  <div class="top">
-      <div class="top-header">
-        <a href="/"><img class="logo" src="../assets/img/logo.png" alt="Linpy Home"></a>
-        <ul class="main-nav">
-            <li><NuxtLink to="" class="nuxtlink">使い方</NuxtLink></li>
-            <li><NuxtLink to="/user/login" class="nuxtlink">ログイン</NuxtLink></li>
-            <li><NuxtLink to="/user/register" class="nuxtlink">新規登録</NuxtLink></li>
-        </ul>
-      </div>
-      <div class="top-content">
-            <h1>関係値が人を、組織を、ドライブする</h1>
-            <h3>組織の関係値向上に寄与するコミュニケーションツール</h3>
-            <h3>エンゲージメントを向上し組織の目標達成に貢献</h3>
-            <div class="top-input">
-                <input class="ef" type="text" placeholder="emailを入力してください">
-                <span class="focus_line"></span>
-                <input class="button" type="button" value="新規登録" >
-            </div>
-      </div>
+  <div class="container">
+    <div class="top">
+        <div class="top-header">
+          <a href="/"><img class="logo" src="../assets/img/logo.png" alt="Linpy Home"></a>
+          <ul class="main-nav">
+              <li><NuxtLink to="" class="nuxtlink">使い方</NuxtLink></li>
+              <li><NuxtLink to="/user/login" class="nuxtlink">ログイン</NuxtLink></li>
+              <li><NuxtLink to="/user/register" class="nuxtlink">新規登録</NuxtLink></li>
+          </ul>
+        </div>
+        <div class="top-content">
+              <h1>関係値が人を、組織を、ドライブする</h1>
+              <h3>組織の関係値向上に寄与するコミュニケーションツール</h3>
+              <h3>エンゲージメントを向上し組織の目標達成に貢献</h3>
+              <div class="top-input">
+                  <input class="ef" type="text" placeholder="emailを入力してください">
+                  <span class="focus_line"></span>
+                  <NuxtLink to="/user/register" class="button">新規登録</NuxtLink>
+              </div>
+        </div>
+    </div>
+    <div class="bottom">
+      <h1>youtube動画を後に貼り付け</h1>
+    </div>
   </div>
 </template>
 
@@ -86,7 +91,7 @@ export default {
     align-items: center;
     text-align: center;
     position: relative;
-    top: 100px;
+    top: 70px;
 }
 
 .top-content h1{
@@ -135,6 +140,15 @@ export default {
 .button:hover {
   color: #fff;
   background-color: #02b1b4;
+}
+
+.bottom {
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    margin: 0 auto;
 }
 
 </style>

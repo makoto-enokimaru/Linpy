@@ -18,7 +18,7 @@ export default {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    min-height: 10vh;
+    min-height: 12vh;
 }
 
 .logo {
