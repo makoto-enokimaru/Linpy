@@ -13,6 +13,9 @@ RUN apt-get update -y && \
 	npm install -g create-nuxt-app -S && \
     npm install -g @vue/cli -S && \
     npm install -g @vue/cli-init -S && \
-    npm install ejs@3.0.1 -S
+    npm install ejs@3.0.1 -S && \
+    npm install defu@3.1.0
+
 
 COPY . /app
+
